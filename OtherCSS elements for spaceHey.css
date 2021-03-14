@@ -1,29 +1,30 @@
-MP3's;
+/*MP3's*/
 
 <audio controls="">
   <source src="https:/yourwebsitelink.com/websitemp3filename.mp3" type="audio/mp3">
 </source></source></audio>
 
-For OGGs;
+/*For OGGs*/
 
 <audio controls="">
-   <source src="LINK TO YOUR OGG" type="audio/ogg">
+   <source src="https:/yourwebsitelink.com/websitemp3filename.ogg" type="audio/ogg">
 </source></source></audio>
 
-For both;
+/*For both*/
 
 <audio controls="">
   <source src="https:/yourwebsitelink.com/websitemp3filename.mp3" type="audio/mp3">
-  <source src="https:/yourwebsitelink.com/websitemp3filename.mp3" type="audio/ogg">
+  <source src="https:/yourwebsitelink.com/websitemp3filename.ogg" type="audio/ogg">
 </source></source></audio>
 
-New Lines;
-
+/*New Lines
 you can use the following <p> code to start a new line 'return' in your interests section to make text
 up and down instead of writing clear to the edge.
+*/
+
 <p>
 
-Image Embed code;
+/*Image Embed code*/
 
 <div class="gallery">
   <a target="_blank" href="imagename.png">
