@@ -1,0 +1,243 @@
+<style>
+@import 
+url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/*Background image link, text colors, font, corners in the field below*/
+:root{
+  --headers: #FF0000;
+  --links: red;
+  --text: red;
+  --names: red;
+
+  --background_image: url("https://i.imgur.com/5QQ6cIR.jpg");
+
+  --font-family: 'New Courier', 'New Courier', 'New Courier', courier;
+   
+  --mynamesize: 30px;
+
+  --transparency: 0.5;
+
+  --curve: 0px;
+
+  --hue: 0deg;
+
+  --simple_bg: #000000;
+
+  --topic1: "Interests";
+  --topic2: "Music";
+  --topic3: "Films";
+  --topic4: "Youtubers";
+  --topic5: "Texts";
+  --topic6: "Heros";
+
+  --myactions: "Feel free to contact";
+  --mytopics: "Don't let anyone define you";
+  --mylinks: "Pages";
+}
+/*Colors are applied to positions here*/
+h3, h4, h5, .url-info b{ color: var(--headers) !important;} /* headings*/
+a{color: var(--links) !important;} /* color of links */
+p, h2{color: var(--text) !important;} /* color of text */
+h1, .count, .friends a p{color: var(--names) !important;} /* color of names, and friends counter */
+nav label{color: var(--headers) !important;} /* color of search */
+.section h4{color: var(--names) !important;} /* aboutme & want2meet headings */
+.online{color: var(--links) !important;} /* color of the 'online' text */
+.section{color: var(--text) !important;} /* sometimes <p> is broken by embeds maybe. */
+/*Box Color 0-255*/
+:root{  --box_color_and_seethru: rgba(0, 0, 0, var(--transparency));}  
+/*Font Family
+You can place below this comment; text-shadow: 	2px 2px black !important; for text shadows
+*/
+h1, h2, h3, h4, h5, a, p, nav label, .section{ 
+font-family: var(--font-family) !important;	
+}
+/*Profile name size*/
+h1{ 
+ font-size: var(--mynamesize) !important;
+ text-transform:none !important;
+ padding-left:10px !important;
+}
+/* Background Image layout, I highly recommend these settings, 
+this scales a small file size background like 720p up to screen size meaning 
+you can have a detailed 200kb jpg as your wallpaper keeping things super efficient
+*/
+body {
+background-image: var(--background_image) !important;
+background-size: cover;
+background-attachment: fixed;
+background-color:black !important;
+}   
+/*Boxes, transparency is in the first root section of the code*/
+.heading, .url-info, .blurbs, .details, .mood, .blog-preview, .friends, .contact, .table, .table-section, footer{
+background-color:var(--box_color_and_seethru) !important;
+padding: 2px !important;
+border: var(--borders) !important;
+/* there's a subtle-ish gradient effect on every box on holmes' page 
+it's disabled here so the root transparency works right
+background-image: linear-gradient(330deg, rgba(90, 90, 90, 0.1), rgba(60,60,60,0.1), rgba(100, 100, 100, 0.1)) !important;*/
+}
+ /*Box Blur effect*/
+#comments, .blurbs, .blog-preview, .friends, .mood, .contact, .table-section, footer
+{   backdrop-filter: blur(8px);}
+/*Fine Tunning*/
+.table-section{border:none !important;background-color:var(--box_color_and_seethru)!important;}
+.heading{background:none !important;padding-bottom:0px !important;}
+/*
+Profile Pic
+you can rotate the face with
+transform: rotate(90deg) !important;
+*/
+.profile-pic img{
+outline:none !important;
+filter:hue-rotate(var(--hue)) drop-shadow(2px 2px black) !important;
+}
+/*Friends profile pics*/
+.friends-grid img{
+outline:none !important;filter: opacity(90%) !important;
+width:80% !important; height:80% !important;
+filter:hue-rotate(var(--hue)) !important;
+}
+/*Comment Profile pics*/
+.inner img{
+outline:none !important;
+filter: hue-rotate(var(--hue)) drop-shadow(1px 1px 2px midnightblue) !important;
+}
+/*Embedding
+this works for youtube well enough, dunno about the others. experiment! try 100x100px soundcloud players c_c (opacity 1.0 is fully visible) */
+iframe{border-radius: 60px !important;opacity: 0.66 !important;}
+/*Navigation*/
+nav{background-color:var(--box_color_and_seethru); !important;}
+nav ul{background:none !important;}
+nav img{filter: opacity(80%) !important;}
+nav ul a img, .mood a img{display:none !important;}
+.top{background:none !important;background-color:rgba(0, 0, 0, 0.8); !important;}
+/*spaceHey Logo
+the color of the spacehey logo can be changed with the help of this awesome tool
+https://codepen.io/sosuke/pen/Pjoqqp
+brightness 0 and saturate 100 at the start of that line are required*/
+nav img.logo{filter: brightness(0) saturate(100%) invert(18%) sepia(94%) saturate(6833%) hue-rotate(358deg) brightness(102%) contrast(111%) !important;}
+/*Hide info URL, not needed on profiles*/
+.url-info{display:none !important;}
+/*Table of intrests - change 0.0 to 0.3 or higher to make the individual cells darker*/
+td {background-color:rgba(0, 0, 0, 0.3) !important;}
+/*Middle Section
+change the last 0.0 to 0.3 to see what happens
+this is where you'd tweak the middle background what is white in a normal page
+maybe have another background image here ?_? plenty of possibilities */
+main{background-color:rgba(0, 0, 0, 0.0); !important;}
+/*
+Adjust Border size, style, Color and entire page outline if you want it
+if you want borders, turn that 0px into 1px or more. might look cool with opaque boxes
+if you wanna experiment with borders, you could make your own variable too, idk
+plenty of styles to choose from https://www.w3schools.com/css/css_border.asp */
+.friends th, tr, .friends td, th, .icon, #comments, main, .comments-table, .friends, .profile-info, .table, .table-section, .contact, .url-info, .mood, .blurbs, .blog-preview, .details, .profile-pic img
+{
+border: 2px outset !important;
+border-color: red !imortant;
+outline: none !important;
+}
+/*Exceptions Etc.*/
+.icon{border:none !important;}
+.mood{margin-bottom:10px !important;}
+.blurbs{margin-top:10px !important;}
+.friends{margin-top:-10px !important;}
+.profile-info{border-radius: var(--curve) !important;}
+.comments-table{border-radius: var(--curve) !important;border:none !important;}
+.table-section{padding-bottom:7px !important;}
+#comments{margin-top:15px !important;padding-bottom:15px !important}
+.details p:last-child{color:var(--links) !important;  filter: brightness(95%);
+}
+/*Removal of comic sans intrusion*/
+.contact, .f-row, .f-col{padding-left:0px !important;margin-left:0px !important;margin-right:0px !important;padding-right:0px !important;}
+.contact{padding-left:2px !important;}
+.f-row{margin-bottom:3px !important;padding-bottom:0px !important;padding-top:2px !important;margin-top:0px !important;}
+.f-col a{margin-left:-2px !important;padding-left:-2px !important;}
+.contact{padding-bottom:12px !important;}
+/*Search Bar using colors from root*/
+.search-wrapper input[type=text] {background-color: rgba(0, 0, 0, 0.5) !important;border: 1px dotted var(--headers) !important;color:var(--names) !important;border-radius: 10px !important;}
+button{border-radius: 10px !important;border: 1px dotted var(--headers) !important;font-family: var(--font-family) !important;background-color:rgba(0, 0, 0, 0.5) !important;color:var(--headers) !important;}
+/*Fixes long strings within code-tags breaking comment tables*/
+code{  word-break: break-all !important;}
+/*Custom header hack strings are in the root 
+a roundabout way of deleting the headers is to have them be "" in the root 
+or maybe you could just have them be ascii characters like +´`+´`+´`+´`+ or smthng
+*/
+.w-40 .table-section:last-child .heading h4{color:transparent !important;text-shadow: none !important;letter-spacing: -100px;}
+
+.w-40 .table-section:last-child .heading::after{
+  content: var(--mylinks);
+font-family: var(--font-family) !important;	
+ text-shadow: 	2px 2px black !important;
+ text-transform:uppercase !important;color: var(--headers) !important;font-weight: bold !important;}
+ 
+.w-40 .table-section:nth-last-child(2) .heading h4{color:transparent !important;text-shadow: none !important;letter-spacing: -100px;}
+
+.w-40 .table-section:nth-last-child(2) .heading::after{
+  content: var(--mytopics);
+font-family: var(--font-family) !important;	
+ text-shadow: 	2px 2px black !important;
+ text-transform:uppercase !important;color: var(--headers) !important; font-weight: bold !important;
+}
+
+.w-40 .contact .heading h4{color:transparent !important;text-shadow: none !important;letter-spacing: -100px;}
+
+.w-40 .contact .heading::after{
+  content: var(--myactions);
+font-family: var(--font-family) !important;	
+ text-shadow: 	2px 2px black !important;
+ text-transform:uppercase !important;color: var(--headers) !important;font-weight: bold !important;}
+ 
+/*No blubs header this style doesn't need the blurbs header*/
+.blurbs .heading{display:none !important;}
+/* Personalized Topics
+we're gonna make our own topics. change these in the root too
+same hack as above, though this is somehow even more fragile. might be buggy
+*/
+.table-section:not(:last-child) .details-table tr td:first-child p{color:transparent !important;text-shadow: none !important;letter-spacing: -100px;}
+.details-table tr td:first-child p::after{
+  color:var(--links) !important;
+  letter-spacing:normal !important;
+   text-shadow: 	2px 2px black !important;
+   filter: brightness(95%) !important;
+}
+.table-section:not(:last-child) .details-table tr:nth-child(1) td:first-child p::after{
+  content: var(--topic1);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(2) td:first-child p::after{
+  content: var(--topic2);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(3) td:first-child p::after{
+  content: var(--topic3);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(4) td:first-child p::after{
+  content: var(--topic4);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(5) td:first-child p::after{
+  content: var(--topic5);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(6) td:first-child p::after{
+  content: var(--topic6);
+}
+/*h r tag you can make these lines in your aboutme with the <hr> tag */
+hr{  border: 1px dashed var(--names) !important;filter: brightness(55%) !important;}
+/*Simplified Variant - move that line over this line
+move this entire line over that line to toggle the simplified variant ON/OFF
+
+.heading, .url-info, .blurbs, .details, .mood, .blog-preview, .friends, .contact, .table, .table-section, footer{
+background-color:transparent !important;    background-image:none !important;
+}
+
+main, footer, nav{background-color:var(--simple_bg) !important;border-radius: 0px !important;}
+  footer{margin:0px !important;border-radius:0px 0px var(--curve) var(--curve) !important; }
+  p, a, h1, h2, h3, h4, h5, h6{text-shadow:none !important;}
+  .details-table tr td:first-child p::after{text-shadow:none !important}
+  
+  .w-40 .contact .heading::after{text-shadow:none !important;}
+  .w-40 .table-section:last-child .heading::after{text-shadow:none !important;}
+  .w-40 .table-section:nth-last-child(2) .heading::after{text-shadow:none !important;}
+  nav label{text-shadow:0px 0px white !important;}
+  button{background-color:transparent !important}
+  .profile img, .friends-grid img, .inner img{filter:none !important;}
+  .search-wrapper input[type=text] {background-color: transparent !important;}  
+  .url-info, #comments, .table, button, .search-wrapper input[type=text]{border:2px dashed var(--text) !important;background-color:rgba(120,120,120,0.014) !important}
+*/
+</style>
