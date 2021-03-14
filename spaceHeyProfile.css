@@ -1,6 +1,6 @@
 <style>
 @import 
-url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
 /*Background image link, text colors, font, corners in the field below*/
 :root{
   --headers: #FF0000;
@@ -8,15 +8,13 @@ url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
   --text: red;
   --names: red;
 
-  --background_image: url("https://i.imgur.com/5QQ6cIR.jpg");
+  --background_image: url("https://i.imgur.com/aLIFkbg.jpg");
 
   --font-family: 'New Courier', 'New Courier', 'New Courier', courier;
    
   --mynamesize: 30px;
 
   --transparency: 0.5;
-
-  --curve: 0px;
 
   --hue: 0deg;
 
@@ -99,7 +97,7 @@ filter:hue-rotate(var(--hue)) !important;
 /*Comment Profile pics*/
 .inner img{
 outline:none !important;
-filter: hue-rotate(var(--hue)) drop-shadow(1px 1px 2px midnightblue) !important;
+filter: hue-rotate(var(--hue)) drop-shadow(1px 2px 2px red) !important;
 }
 /*Embedding
 this works for youtube well enough, dunno about the others. experiment! try 100x100px soundcloud players c_c (opacity 1.0 is fully visible) */
@@ -219,25 +217,4 @@ same hack as above, though this is somehow even more fragile. might be buggy
 }
 /*h r tag you can make these lines in your aboutme with the <hr> tag */
 hr{  border: 1px dashed var(--names) !important;filter: brightness(55%) !important;}
-/*Simplified Variant - move that line over this line
-move this entire line over that line to toggle the simplified variant ON/OFF
-
-.heading, .url-info, .blurbs, .details, .mood, .blog-preview, .friends, .contact, .table, .table-section, footer{
-background-color:transparent !important;    background-image:none !important;
-}
-
-main, footer, nav{background-color:var(--simple_bg) !important;border-radius: 0px !important;}
-  footer{margin:0px !important;border-radius:0px 0px var(--curve) var(--curve) !important; }
-  p, a, h1, h2, h3, h4, h5, h6{text-shadow:none !important;}
-  .details-table tr td:first-child p::after{text-shadow:none !important}
-  
-  .w-40 .contact .heading::after{text-shadow:none !important;}
-  .w-40 .table-section:last-child .heading::after{text-shadow:none !important;}
-  .w-40 .table-section:nth-last-child(2) .heading::after{text-shadow:none !important;}
-  nav label{text-shadow:0px 0px white !important;}
-  button{background-color:transparent !important}
-  .profile img, .friends-grid img, .inner img{filter:none !important;}
-  .search-wrapper input[type=text] {background-color: transparent !important;}  
-  .url-info, #comments, .table, button, .search-wrapper input[type=text]{border:2px dashed var(--text) !important;background-color:rgba(120,120,120,0.014) !important}
-*/
 </style>
